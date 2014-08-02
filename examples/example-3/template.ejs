@@ -1,0 +1,17 @@
+
+<style>
+    div.output { font-family: courier }
+    div.output h1 { font-size: 16px }
+    div.output ul { padding: 10px; margin: 10px 30px; }
+    div.output ul li { margin: 10px 50px; font-size: 12px; }
+</style>
+
+<div class="output">
+    <p><%= this.name %></p>
+    <p>loves:</p>
+    <ul>
+    <% for(var love in this.loves) { %>
+        <li><%= this.loves[love] %></li>
+    <% } %>
+    </ul>
+</div>

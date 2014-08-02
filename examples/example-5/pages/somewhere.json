@@ -1,0 +1,21 @@
+{
+    "id"        : 2,
+    "page"      : { 
+        "title": "Somewhere Page",
+        "owner": "Alice"
+    },
+    "links" : [ 
+        { 
+            "rel"  : "urn:self",
+            "href" : "pages/somewhere.json"
+        },
+        { 
+            "rel"  : "urn:home",
+            "href" : "index.json"
+        },
+        { 
+            "rel"  : "urn:another:page",
+            "href" : "pages/another.json"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "id"        : 3,
+    "page"      : { 
+        "title": "Another Page",
+        "owner": "Charles"
+    },
+    "links" : [ 
+        { 
+            "rel"  : "urn:self",
+            "href" : "pages/another.json"
+        },
+        { 
+            "rel"  : "urn:home",
+            "href" : "index.json"
+        },
+        { 
+            "rel"  : "urn:somewhere:else",
+            "href" : "pages/somewhere.json"
+        }
+    ]
+}

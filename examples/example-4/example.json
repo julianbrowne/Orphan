@@ -1,0 +1,20 @@
+{
+    "id"        : 12345,
+    "name"      : "Milton Waddams",
+    "age"       : 42,
+    "loves"     : [ "cake", "staplers", "fire" ],
+    "links" : [     
+        { 
+            "rel"  : "urn:self",
+            "href" : "/people/12345"
+        },
+        {
+            "rel"  : "urn:social:friends",
+            "href" : "/people/12345/friends"
+        },
+        {
+            "rel"  : "urn:social:enemies",
+            "href" : "/people/12345/enemies"
+        }
+    ]
+}

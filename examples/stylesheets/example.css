@@ -1,0 +1,26 @@
+
+h1, h2 {
+    font-family: helvetica;
+    margin: 0;
+}
+
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.4em; }
+
+p { 
+    font-size: 1em;
+    margin: 0.6em;
+    padding: 0.6em;
+}
+
+#json, #html, #markdown { 
+    color: #000000;
+    background: #E6E6E6;
+    font-family: courier;
+    margin: 1em 2em;
+    padding: 0.5em;
+}
+
+#json, #markdown { 
+    white-space: pre;
+}

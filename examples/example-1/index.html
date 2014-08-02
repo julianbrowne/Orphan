@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/examples/stylesheets/example.css">
+    <script src="/lib/require.js"></script>
+    <script src="/lib/loader.js"></script>
+    <script>
+        window.onload = function() { 
+
+            var client = new Orphan("http://127.0.0.1:8686/");
+
+            if(client) { 
+                client.get("examples/example-1/example.md", function(markdown) { 
+                    Orphan.ui.addDiv(markdown, 'markdown');
+                    var html = Orphan.markdown.makeHtml(markdown);
+                    Orphan.ui.addDiv(html, 'html');
+                });
+            }
+            else { 
+                Orphan.ui.addDiv("cannot instantiate orphan");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <p><a href="/examples">examples</a></p>
+    <h1>Example 1</h1>
+    <p>This demo converts markdown discovered via an HTTP GET to html:</p>
+    <h2>MARKDOWN:</h2>
+    <div id="markdown"></div>
+    <h2>HTML:</h2>
+    <div id="html"></div>
+</body>
+</html>

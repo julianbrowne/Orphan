@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/examples/stylesheets/example.css">
+    <script src="/lib/require.js"></script>
+    <script src="/lib/loader.js"></script>
+    <script>
+        window.onload = function() { 
+
+            var client = new Orphan("http://127.0.0.1:8686/examples/example-5/");
+            console.log(client);
+            var qs = Orphan.utils.queryStringObj(location.href);
+            var resource = (qs['res']) ? qs['res'] : 'index.json';
+
+            if(client) { 
+                client.get(resource, function(json) { 
+                    Orphan.ui.addDiv(json, 'json');
+                    var obj = JSON.parse(json);
+                    var cfg = { 
+                        edit: false, 
+                        links: 'links',
+                        href: { 
+                            field: 'href',
+                            text: 'rel'
+                        },
+                        image: {
+                            field: 'image'
+                        }
+                    };
+                    var template = Orphan.template.dynamic.create(cfg);
+                    var html = template.render(obj);
+                    Orphan.ui.addDiv(html, 'html');
+                });
+            }
+            else { 
+                Orphan.ui.addDiv("cannot instantiate orphan");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <p><a href="/examples">examples</a></p>
+    <h1>Example 5</h1>
+    <p>This demo renders multiple JSON docs retreived from HTTP GETs to html using a dynamic template:</p>
+    <h2>JSON:</h2>
+    <div id="json"></div>
+    <h2>HTML:</h2>
+    <div id="html"></div>
+</body>
+</html>

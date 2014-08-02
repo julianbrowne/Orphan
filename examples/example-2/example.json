@@ -1,0 +1,48 @@
+{
+	"id"		: 12345,
+	
+	"name"      : "Milton Waddams",
+
+	"age"       : 42,
+
+	"loves"     : [ "cake", "staplers", "fire" ],
+	
+	"addresses" : [
+		{
+			"type" : "work",
+			"address" :
+			{
+				"houseNumber" : "Initech",
+				"streetName" : "Office Space",
+				"town" : "Basement"
+			}
+		},
+		{
+			"type" : "billing",
+			"address" :
+			{
+				"houseNumber" : 99,
+				"streetName" : "Office Space 2",
+				"town" : "Basement"
+			}
+		}
+	],
+	
+	"links" : [
+	
+		{
+			"rel"  : "urn:self",
+			"href" : "/people/12345"
+		},
+	
+		{
+			"rel"  : "urn:social:friends",
+			"href" : "/people/12345/friends"
+		},
+	
+		{
+			"rel"  : "urn:social:enemies",
+			"href" : "/people/12345/enemies"
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+    "id"        : 1,
+    "page"      : { 
+        "title": "Home Page",
+        "owner": "Bob"
+    },
+    "links" : [ 
+        { 
+            "rel"  : "urn:self",
+            "href" : "index.json"
+        },
+        {
+            "rel"  : "urn:somewhere:else",
+            "href" : "pages/somewhere.json"
+        },
+        {
+            "rel"  : "urn:another:page",
+            "href" : "pages/another.json"
+        }
+    ]
+}
