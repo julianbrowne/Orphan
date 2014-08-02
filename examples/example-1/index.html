@@ -7,10 +7,11 @@
     <script>
         window.onload = function() { 
 
-            var client = new Orphan("http://127.0.0.1:8686/");
+            var client = new Orphan(Orphan.utils.host + '/examples/example-1/');
 
             if(client) { 
-                client.get("examples/example-1/example.md", function(markdown) { 
+                console.log(client.base);
+                client.get('example.md', function(markdown) { 
                     Orphan.ui.addDiv(markdown, 'markdown');
                     var html = Orphan.markdown.makeHtml(markdown);
                     Orphan.ui.addDiv(html, 'html');

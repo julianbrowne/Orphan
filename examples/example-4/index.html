@@ -7,10 +7,10 @@
     <script>
         window.onload = function() { 
 
-            var client = new Orphan("http://127.0.0.1:8686/");
+            var client = new Orphan(Orphan.utils.host + '/examples/example-4/');
 
             if(client) { 
-                client.get("examples/example-4/example.json", function(json) { 
+                client.get("example.json", function(json) { 
                     Orphan.ui.addDiv(json, 'json');
                     var obj = JSON.parse(json);
                     var template = Orphan.template.mustache.create('/examples/example-4/template.mustache');

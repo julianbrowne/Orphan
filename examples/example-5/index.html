@@ -7,8 +7,7 @@
     <script>
         window.onload = function() { 
 
-            var client = new Orphan("http://127.0.0.1:8686/examples/example-5/");
-            console.log(client);
+            var client = new Orphan(Orphan.utils.host + '/examples/example-5/');
             var qs = Orphan.utils.queryStringObj(location.href);
             var resource = (qs['res']) ? qs['res'] : 'index.json';
 
