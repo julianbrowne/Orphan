@@ -4,6 +4,8 @@
         "title": "Home Page",
         "owner": "Bob"
     },
+    "empty1": [],
+    "empty2": {},
     "links" : [ 
         { 
             "rel"  : "urn:self",
